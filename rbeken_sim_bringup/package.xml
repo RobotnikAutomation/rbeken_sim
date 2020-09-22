@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rbeken_sim_bringup</name>
+  <version>0.0.0</version>
+  <description>The rbeken_sim_bringup package</description>
+
+  <maintainer email="aarnal@robotnik.es">Alejandro Arnal</maintainer>
+  <maintainer email="jgomez@robotnik.es">Jose Gómez</maintainer>
+  <maintainer email="mmillet@robotnik.es">Marta Miller</maintainer>
+
+
+  <license>BSD</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roslaunch</build_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>rbeken_control</exec_depend>  
+  <exec_depend>rbeken_description</exec_depend>
+  <exec_depend>rbeken_pad</exec_depend> 
+</package>
