@@ -61,3 +61,58 @@ For example, to launch a RB-Eken with rubber wheels and a 3-fingers gripper:
 ```bash
 roslaunch rbeken_sim_bringup rbeken_complete.launch kinematics:=skid robot_xacro:=rbeken_rubber_3f.urdf.xacro gripper_controllers:=gripper/gripper_controller
 ```
+
+&nbsp;
+
+## Funcionalities
+
+Using the simulation you can map an environment, navigate through it and localize the robot in the map.
+
+### Mapping
+
+You can create a map using the following command:
+
+```bash
+ROS_NAMESPACE=robot roslaunch rbeken_localization slam_gmapping.launch 
+```
+
+Once you have completed the map, you need to save it (using an addition console):
+
+```bash
+ROS_NAMESPACE=robot roslaunch rbeken_localization map_saver.launch 
+```
+
+By default the map will be saved in the home directory.
+
+### Localization
+
+First you will need to launch a map server:
+
+```bash
+ROS_NAMESPACE=robot roslaunch rbeken_localization map_server.launch map_file:=simulation_inside/simulation_inside.yaml
+```
+
+Then run the localization:
+
+* If you are using skid configuration:
+```bash
+ROS_NAMESPACE=robot roslaunch rbeken_localization amcl.launch 
+```
+
+* If you are using omni configuration:
+```bash
+ROS_NAMESPACE=robot roslaunch rbeken_localization amcl.launch odom_model_type:=omni
+```
+
+### Navigation
+
+Depending on the kinematics configuration:
+* If you are using skid configuration:
+```bash
+ROS_NAMESPACE=robot roslaunch rbeken_navigation move_base.launch
+```
+
+* If you are using omni configuration:
+```bash
+ROS_NAMESPACE=robot roslaunch rbeken_navigation move_base.launch differential_robot:=false
+```
