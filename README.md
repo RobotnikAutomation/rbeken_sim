@@ -106,3 +106,25 @@ To run the simulation:
 roslaunch rbeken_sim_bringup rbeken_complete.launch 
 ```
 The README located in rbeken_sim_bringup provides more information about the different configurations to run the simulation.
+
+---
+## Docker Usage
+In order to run this simulation you will need nvidia graphical accelation
+
+### Installation of required files
+
+- [docker](https://docs.docker.com/engine/install/ubuntu/)
+- [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
+- nvidia-drivers
+
+### Usage
+
+```bash
+git clone git@github.com:RobotnikAutomation/rbeken_sim.git
+cd rbeken_sim
+git checkout noetic-devel
+cd docker
+export ROS_BU_PKG="rbeken_sim_bringup"
+export ROS_BU_LAUNCH="rbeken_complete.launch"
+docker compose up
+```
