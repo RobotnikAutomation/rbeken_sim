@@ -1,0 +1,52 @@
+repositories:
+  src/rbeken_common:
+    type: git
+    url: https://github.com/RobotnikAutomation/rbeken_common
+    version: melodic-devel
+  src/robotnik_msgs:
+    type: git
+    url: https://github.com/RobotnikAutomation/robotnik_msgs.git
+    version: melodic-devel
+  src/robotnik_sensors:
+    type: git
+    url: https://github.com/RobotnikAutomation/robotnik_sensors.git
+    version: melodic-devel
+  src/rcomponent:
+    type: git
+    url: https://github.com/RobotnikAutomation/rcomponent.git
+    version: master
+  src/robotnik_base_hw_sim:
+    type: git
+    url: https://github.com/RobotnikAutomation/robotnik_base_hw_sim.git
+    version: master
+  src/Universal_Robots_ROS_Driver:
+    type: git
+    url: https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git
+    version: master
+  src/universal_robot:
+    type: git
+    url: https://github.com/fmauch/universal_robot.git
+    version: melodic-devel-staging
+  src/gazebo_ros_pkgs:
+    type: git
+    url: https://github.com/RobotnikAutomation/gazebo_ros_pkgs.git
+    version: melodic-devel
+  src/roboticsgroup_gazebo_plugins:
+    type: git
+    url: https://github.com/RobotnikAutomation/roboticsgroup_gazebo_plugins.git
+    version: master
+  src/robotnik_gazebo_models:
+    type: git
+    url: https://github.com/RobotnikAutomation/robotnik_gazebo_models.git
+    version: master
+
+
+
+    
+
+
+    
+
+
+
+
